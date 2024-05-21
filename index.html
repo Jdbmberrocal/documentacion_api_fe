@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/arduino-light.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style type="text/css">
     .btn__element{
       width: 100%;
@@ -22,9 +23,19 @@
       border: 1px solid grey;
       margin-left: 0;
     }
-    .btn__element span{
+    /* .btn__element span{
       font-size: 16px;
       color: #ad132a;
+    } */
+
+    .required{
+      font-size: 16px;
+      color: #ad132a;
+    }
+
+    .opcional{
+      font-size: 16px;
+      color: #0b9c06;
     }
     </style>
   </head>
@@ -46,6 +57,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Reglas de validación</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="json/ApiDianV2.1 2024.postman_collection.json" target="_blank">Colecciones Postman</a>
+        </li>
       </ul>
     </header>
 
@@ -62,16 +76,20 @@
               </h2>
               <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
-                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Consecutivo del rango de facturación">number: <i class="fa-solid fa-arrow-right"></i> <span>numeric</span></a>
-                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Su valor debe ser el id de la tabla tipo de documento electrónico. Ejemplo 1 corresponde a Factura electrónica">type_document_id: <i class="fa-solid fa-arrow-right"></i> <span>númerico</span></a>
-                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Corresponde a la fecha del documento en formato YYYY-MM-DD">date: <i class="fa-solid fa-arrow-right"></i> <span>date</span></a>
-                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Corresponde a la hora del documento en formato h:m:s.">time: <i class="fa-solid fa-arrow-right"></i> <span>timestamp</span></a>
-                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Número de resolución asignado por la DIAN y previamente configurado en la API">resolution_number: <i class="fa-solid fa-arrow-right"></i> <span>string</span></a>
-                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Es el prefijo asignado por la DIAN y configurado en la API">prefix: <i class="fa-solid fa-arrow-right"></i> <span>string</span></a>
-                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Corresponde a los datos del cliente.">customer: <i class="fa-solid fa-arrow-right"></i> <span>object</span></a>
-                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="corresponde al nit o cedula del cliente en caso de ser cedula no se utiliza la propiedad dv">customer <i class="fa-solid fa-angles-right"></i> identification_number: <i class="fa-solid fa-arrow-right"></i> <span>string</span></a>
-                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Nombre o Razón social del cliente">customer <i class="fa-solid fa-angles-right"></i> name: <i class="fa-solid fa-arrow-right"></i> <span>string</span></a>
-                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Telefóno o Celular del cliente">customer <i class="fa-solid fa-angles-right"></i> phone: <i class="fa-solid fa-arrow-right"></i> <span>string</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Consecutivo del rango de facturación">number: <i class="fa-solid fa-arrow-right"></i> <span class="required">numeric</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Su valor debe ser el id de la tabla tipo de documento electrónico. Ejemplo 1 corresponde a Factura electrónica">type_document_id: <i class="fa-solid fa-arrow-right"></i> <span class="required">númerico</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Corresponde a la fecha del documento en formato YYYY-MM-DD">date: <i class="fa-solid fa-arrow-right"></i> <span class="required">date</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Corresponde a la hora del documento en formato h:m:s.">time: <i class="fa-solid fa-arrow-right"></i> <span class="required">timestamp</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Número de resolución asignado por la DIAN y previamente configurado en la API">resolution_number: <i class="fa-solid fa-arrow-right"></i> <span class="required">string</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Es el prefijo asignado por la DIAN y configurado en la API">prefix: <i class="fa-solid fa-arrow-right"></i> <span class="required">string</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Corresponde a los datos del cliente.">customer: <i class="fa-solid fa-arrow-right"></i> <span class="required">object</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="corresponde al nit o cedula del cliente en caso de ser cedula no se utiliza la propiedad dv">customer <i class="fa-solid fa-angles-right"></i> identification_number: <i class="fa-solid fa-arrow-right"></i> <span class="required">string</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Nombre o Razón social del cliente">customer <i class="fa-solid fa-angles-right"></i> name: <i class="fa-solid fa-arrow-right"></i> <span class="required">string</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Telefóno o Celular del cliente">customer <i class="fa-solid fa-angles-right"></i> phone: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">string</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Dirección del cliente">customer <i class="fa-solid fa-angles-right"></i> address: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">string</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Correo del cliente">customer <i class="fa-solid fa-angles-right"></i> email: <i class="fa-solid fa-arrow-right"></i> <span class="required">string</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Registro mercantil del cliente">customer <i class="fa-solid fa-angles-right"></i> merchant_registration: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">string</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Tipo de identificación del cliente. Ver tabla type_document_identification">customer <i class="fa-solid fa-angles-right"></i> type_document_identification_id: <i class="fa-solid fa-arrow-right"></i> <span class="required">numeric</span></a>
                 </div>
               </div>
             </div>
@@ -109,7 +127,12 @@
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <pre><code class="language-capnproto">
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Consumidor final</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary">Impuestos</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary">Descuentos</button>
+                  </div>
+                  <pre><code class="language-json">
 {
   "number": 990000802,
   "type_document_id": 1,
@@ -235,12 +258,35 @@
 
       </div>
     </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <!-- and it's easy to individually load additional languages -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js"></script>
     <script type="text/javascript">
+    hljs.highlightAll();
+
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
     const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
     </script>
