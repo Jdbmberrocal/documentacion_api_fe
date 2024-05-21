@@ -1,0 +1,8 @@
+{
+  {
+    "nombre":"number",
+    "tipo":"number",
+    "requerido":true,
+    "descripcion":""
+  }
+}
