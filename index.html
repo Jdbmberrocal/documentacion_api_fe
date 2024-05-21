@@ -46,7 +46,9 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Tablas Estáticas</a>
+          <a class="nav-link" href="#">
+            <!-- <img src="img/table-excel.svg" width="20" height="20"/>  -->
+            Tablas Estáticas</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -55,10 +57,12 @@
           <a class="nav-link" href="#">Errores de respuesta</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Reglas de validación</a>
+          <a class="nav-link" href="#"> Reglas de validación</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="json/ApiDianV2.1 2024.postman_collection.json" target="_blank">Colecciones Postman</a>
+          <a class="nav-link" href="json/ApiDianV2.1 2024.postman_collection.json" target="_blank">
+            <img src="img/postman-icon.svg" width="20" height="20"/>  Colecciones Postman
+          </a>
         </li>
       </ul>
     </header>
@@ -81,6 +85,8 @@
                   <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Corresponde a la fecha del documento en formato YYYY-MM-DD">date: <i class="fa-solid fa-arrow-right"></i> <span class="required">date</span></a>
                   <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Corresponde a la hora del documento en formato h:m:s.">time: <i class="fa-solid fa-arrow-right"></i> <span class="required">timestamp</span></a>
                   <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Número de resolución asignado por la DIAN y previamente configurado en la API">resolution_number: <i class="fa-solid fa-arrow-right"></i> <span class="required">string</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Activa el texto de confirmación informando al cliente a que correo debe enviar el soporte de pago de la factura, recibe true o false">disable_confirmation_text: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">boolean</span></a>
+
                   <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Es el prefijo asignado por la DIAN y configurado en la API">prefix: <i class="fa-solid fa-arrow-right"></i> <span class="required">string</span></a>
                   <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Corresponde a los datos del cliente.">customer: <i class="fa-solid fa-arrow-right"></i> <span class="required">object</span></a>
                   <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="corresponde al nit o cedula del cliente en caso de ser cedula no se utiliza la propiedad dv">customer <i class="fa-solid fa-angles-right"></i> identification_number: <i class="fa-solid fa-arrow-right"></i> <span class="required">string</span></a>
@@ -89,7 +95,13 @@
                   <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Dirección del cliente">customer <i class="fa-solid fa-angles-right"></i> address: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">string</span></a>
                   <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Correo del cliente">customer <i class="fa-solid fa-angles-right"></i> email: <i class="fa-solid fa-arrow-right"></i> <span class="required">string</span></a>
                   <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Registro mercantil del cliente">customer <i class="fa-solid fa-angles-right"></i> merchant_registration: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">string</span></a>
-                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Tipo de identificación del cliente. Ver tabla type_document_identification">customer <i class="fa-solid fa-angles-right"></i> type_document_identification_id: <i class="fa-solid fa-arrow-right"></i> <span class="required">numeric</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Tipo de identificación del cliente. Ver tabla type_document_identification">customer <i class="fa-solid fa-angles-right"></i> type_document_identification_id: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">numeric</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Tipo de organización del cliente. Ver tabla type_organization">customer <i class="fa-solid fa-angles-right"></i> type_organization_id: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">numeric</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Municipio del cliente. Ver tabla municipality">customer <i class="fa-solid fa-angles-right"></i> municipality_id: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">numeric</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Regímen del cliente. Ver tabla type_regime">customer <i class="fa-solid fa-angles-right"></i> type_regime_id: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">numeric</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Responsabilidades del cliente. Ver tabla type_liability">customer <i class="fa-solid fa-angles-right"></i> type_liability_id: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">numeric</span></a>
+
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Permite ingresar una descripción general del documento en caso que exista.">notes: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">string</span></a>
                 </div>
               </div>
             </div>
