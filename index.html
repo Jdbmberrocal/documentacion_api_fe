@@ -74,7 +74,7 @@
           <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                   Campos de Factura electrónica
                 </button>
               </h2>
@@ -102,6 +102,22 @@
                   <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Responsabilidades del cliente. Ver tabla type_liability">customer <i class="fa-solid fa-angles-right"></i> type_liability_id: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">numeric</span></a>
 
                   <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Permite ingresar una descripción general del documento en caso que exista.">notes: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">string</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Campo para seleccionar la plantilla (pdf) de la factura">invoice_template: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">string</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Permite incluir en el PDF el nombre comercial de la empresa, la representación quedaría con el nombre legal y el nombre comercial">establishment_name: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">string</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Permite incluir en el PDF la dirección comercial de la empresa">establishment_address: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">string</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Permite incluir en el PDF el telefono comercial de la empresa">establishment_phone: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">string</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Permite incluir en el PDF el id del municipio de la dirección comercial de la empresa. Ver tabla municipality">establishment_municipality: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">numeric</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Permite incluir en el PDF el correo comercial de la empresa">establishment_email: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">string</span></a>
+
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Permite definir si se enviará de forma automatica el correo al cliente">sendmail: <i class="fa-solid fa-arrow-right"></i> <span class="required">boolean</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Permite definir si se enviará de forma automatica el documento al correo del emisor, recibe true o false">sendmailtome: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">boolean</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Corresponde a los campos para información relacionadas con los valores totales aplicables a la factura">legal_monetary_totals: <i class="fa-solid fa-arrow-right"></i> <span class="required">object</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Corresponde a la suma de los valores brutos de las líneas de la factura.">legal_monetary_totals <i class="fa-solid fa-angles-right"></i> line_extension_amount: <i class="fa-solid fa-arrow-right"></i> <span class="required">float</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="La suma de las bases de todas lineas de la factura con impuestos">legal_monetary_totals <i class="fa-solid fa-angles-right"></i> tax_exclusive_amount: <i class="fa-solid fa-arrow-right"></i> <span class="required">float</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Suma total de los valores brutos de todas las lineas más tributos menos los descuentos (Productos con impuestos, más productos sin impuestos, más los impuestos, menos los descuentos)">legal_monetary_totals <i class="fa-solid fa-angles-right"></i> tax_inclusive_amount: <i class="fa-solid fa-arrow-right"></i> <span class="required">float</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Suma de todos los descuentos aplicados a nivel de la factura">legal_monetary_totals <i class="fa-solid fa-angles-right"></i> allowance_total_amount: <i class="fa-solid fa-arrow-right"></i> <span class="required">float</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Suma de todos los cargos aplicados a nivel de la factura">legal_monetary_totals <i class="fa-solid fa-angles-right"></i> charge_total_amount: <i class="fa-solid fa-arrow-right"></i> <span class="required">float</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="popover" data-bs-title="Descripción del campo" data-bs-content="Valor a pagar de la factura, valor total de ítems (incluyendo cargos y descuentos a nivel de ítems) + valor tributos + valor cargos – valor descuentos">legal_monetary_totals <i class="fa-solid fa-angles-right"></i> payable_amount: <i class="fa-solid fa-arrow-right"></i> <span class="required">float</span></a>
                 </div>
               </div>
             </div>
@@ -133,78 +149,240 @@
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                   Factura Electrónica de Venta
                 </button>
               </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+              <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <div class="btn-group" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Consumidor final</button>
                     <button type="button" class="btn btn-sm btn-outline-primary">Impuestos</button>
                     <button type="button" class="btn btn-sm btn-outline-primary">Descuentos</button>
                   </div>
-                  <pre><code class="language-json">
+<pre><code class="language-json">
+  {
+    "number": 990000802,
+    "type_document_id": 1,
+    "date": "2023-07-25",
+    "time": "04:08:12",
+    "resolution_number": "18760000001",
+    "prefix": "SETP",
+    "notes": "ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA",
+    "disable_confirmation_text": true,
+    "invoice_template": "one",
+    "template_token": "$2y$10$mzkIm.5uVrwtigToAVY0.O/ENNJSOBjTXpCNUU/Jzaa2z2h/hRxpO",
+    "establishment_name": "DATA INVOICE COLOMBIA",
+    "establishment_address": "CLL 10 #7-58",
+    "establishment_phone": "3146113576",
+    "establishment_municipality": 600,
+    "establishment_email": "alternate_email@alternate.com",
+    "sendmail": true,
+    "sendmailtome": true,
+    "seze": "2021-2017",
+    "head_note": "PRUEBA DE TEXTO LIBRE QUE DEBE POSICIONARSE EN EL ENCABEZADO DE PAGINA DE LA REPRESENTACION GRAFICA DE LA FACTURA ELECTRONICA VALIDACION PREVIA DIAN",
+    "foot_note": "PRUEBA DE TEXTO LIBRE QUE DEBE POSICIONARSE EN EL PIE DE PAGINA DE LA REPRESENTACION GRAFICA DE LA FACTURA ELECTRONICA VALIDACION PREVIA DIAN",
+    "customer": {
+      "identification_number": 41946692,
+      "dv": 6,
+      "name": "ELIZABETH CARDONA VILLADA",
+      "phone": "3103891693",
+      "address": "CLL 4 NRO 33-90",
+      "email": "alexander_obando@hotmail.com",
+      "merchant_registration": "0000000-00",
+      "type_document_identification_id": 3,
+      "type_organization_id": 2,
+      "type_liability_id": 7,
+      "municipality_id": 822,
+      "type_regime_id": 1,
+      "tax_id": 15
+    },
+    "payment_form": {
+      "payment_form_id": 2,
+      "payment_method_id": 30,
+      "payment_due_date": "2023-08-25",
+      "duration_measure": "30"
+    },
+    "allowance_charges": [
+    {
+     "discount_id": 1,
+     "charge_indicator": false,
+     "allowance_charge_reason": "DESCUENTO GENERAL",
+     "amount": "50000.00",
+     "base_amount": "1000000.00"
+   }
+   ],
+   "legal_monetary_totals": {
+    "line_extension_amount": "840336.134",
+    "tax_exclusive_amount": "840336.134",
+    "tax_inclusive_amount": "1000000.00",
+    "allowance_total_amount": "50000.00",
+    "payable_amount": "950000.00"
+  },
+  "tax_totals":
+  [
+    {
+     "tax_id": 1,
+     "tax_amount": "159663.865",
+     "percent": "19",
+     "taxable_amount": "840336.134"
+    }
+  ],
+  "invoice_lines":
+    [
+      {
+       "unit_measure_id": 70,
+       "invoiced_quantity": "1",
+       "line_extension_amount": "840336.134",
+       "free_of_charge_indicator": false,
+       "tax_totals": [
+       {
+         "tax_id": 1,
+         "tax_amount": "159663.865",
+         "taxable_amount": "840336.134",
+         "percent": "19.00"
+       }
+       ],
+       "description": "COMISION POR SERVICIOS",
+       "notes": "ESTA ES UNA PRUEBA DE NOTA DE DETALLE DE LINEA.",
+       "code": "COMISION",
+       "type_item_identification_id": 4,
+       "price_amount": "1000000.00",
+       "base_quantity": "1"
+      }
+    ]
+  }
+
+</code></pre>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Nómina
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+<pre><code class="language-json">
+  {
+    "type_document_id": 9,
+    "establishment_name": "DATA INVOICE COLOMBIA",
+    "establishment_address": "CLL 10 #7-58 BARRIO SAN FELIPE",
+    "establishment_phone": "3226563672",
+    "establishment_municipality": 600,
+    "establishment_email": "alternate_email@alternate.com",
+    "head_note": "PRUEBA DE TEXTO LIBRE QUE DEBE POSICIONARSE EN EL ENCABEZADO DE PAGINA DE LA REPRESENTACION GRAFICA DE LA FACTURA ELECTRONICA VALIDACION PREVIA DIAN",
+    "foot_note": "PRUEBA DE TEXTO LIBRE QUE DEBE POSICIONARSE EN EL PIE DE PAGINA DE LA REPRESENTACION GRAFICA DE LA FACTURA ELECTRONICA VALIDACION PREVIA DIAN",
+    "novelty":{
+      "novelty": false,
+      "uuidnov": ""
+    },
+    "period":{
+      "admision_date": "2018-10-10",
+      "settlement_start_date": "2021-07-01",
+      "settlement_end_date": "2021-07-31",
+      "worked_time": "785.00",
+      "issue_date": "2021-07-28"
+    },
+    "sendmail": true,
+    "sendmailtome": true,
+    "worker_code": "41946692",
+    "prefix": "NI",
+    "consecutive": 100051,
+    "payroll_period_id": 4,
+    "notes": "PRUEBA DE ENVIO DE NOMINA ELECTRONICA",
+    "worker": {
+      "type_worker_id": 1,
+      "sub_type_worker_id": 1,
+      "payroll_type_document_identification_id": 3,
+      "municipality_id": 822,
+      "type_contract_id": 1,
+      "high_risk_pension": false,
+      "identification_number": 41946692,
+      "surname": "CARDONA",
+      "second_surname": "VILLADA",
+      "first_name": "ELIZABETH",
+      "middle_name": null,
+      "address": "BRR LIMONAR MZ 6 CS 3 ET 1",
+      "integral_salarary": false,
+      "salary": "1500000.00",
+      "email": "somemail@somehost.com"
+    },
+    "payment": {
+      "payment_method_id": 10,
+      "bank_name": "BANCO DAVIVIENDA",
+      "account_type": "AHORROS",
+      "account_number": "126070603280"
+    },
+    "payment_dates": [
+    {
+      "payment_date": "2021-03-10"
+    }
+    ],
+    "accrued": {
+      "worked_days": 30,
+      "salary": "750000.00",
+      "transportation_allowance": "115000.00",
+      "accrued_total": "859000.00"
+    },
+    "deductions": {
+      "eps_type_law_deductions_id": 1,
+      "eps_deduction": "60000.00",
+      "pension_type_law_deductions_id": 5,
+      "pension_deduction": "60000.00",
+      "deductions_total": "120000.00"
+    }
+  }
+
+</code></pre>
+
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Nota crédito
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+<pre><code class="language-json">
 {
-  "number": 990000802,
-  "type_document_id": 1,
-  "date": "2023-07-25",
-  "time": "04:08:12",
-  "resolution_number": "18760000001",
-  "prefix": "SETP",
-  "notes": "ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA, ESTA ES UNA NOTA DE PRUEBA",
-  "disable_confirmation_text": true,
-  "invoice_template": "one",
-  "template_token": "$2y$10$mzkIm.5uVrwtigToAVY0.O/ENNJSOBjTXpCNUU/Jzaa2z2h/hRxpO",
-  "establishment_name": "TORRE SOFTWARE NRO 1",
-  "establishment_address": "BRR LIMONAR MZ 6 CS 3 ET 1 PISO 2",
+  "discrepancyresponsecode": 1,
+  "notes": "PRUEBA DE NOTA CREDITO",
+  "prefix": "NC",
+  "number": 94,
+  "type_document_id": 4,
+  "date": "2024-02-20",
+  "time": "06:00:13",
+  "type_operation_id": "8",
+  "establishment_name": "DATA INVOICE COLOMBIA",
+  "establishment_address": "CLL 10 #7-58 BARRIO SAN FELIPE",
   "establishment_phone": "3226563672",
   "establishment_municipality": 600,
-  "establishment_email": "alternate_email@alternate.com",
   "sendmail": true,
   "sendmailtome": true,
   "seze": "2021-2017",
   "head_note": "PRUEBA DE TEXTO LIBRE QUE DEBE POSICIONARSE EN EL ENCABEZADO DE PAGINA DE LA REPRESENTACION GRAFICA DE LA FACTURA ELECTRONICA VALIDACION PREVIA DIAN",
-  "foot_note": "PRUEBA DE TEXTO LIBRE QUE DEBE POSICIONARSE EN EL PIE DE PAGINA DE LA REPRESENTACION GRAFICA DE LA FACTURA ELECTRONICA VALIDACION PREVIA DIAN",
+  "foot_note": "PRUEBA DE TEXTO LIBRE QUE DEBE POSICIONARSE EN EL ENCABEZADO DE PAGINA DE LA REPRESENTACION GRAFICA DE LA FACTURA ELECTRONICA VALIDACION PREVIA DIAN",
 	"customer": {
-		"identification_number": 41946692,
-		"dv": 6,
-		"name": "ELIZABETH CARDONA VILLADA",
+		"identification_number": 900166483,
+		"dv": 1,
+		"name": "INVERSIONES DAVAL SAS",
 		"phone": "3103891693",
 		"address": "CLL 4 NRO 33-90",
-		"email": "alexander_obando@hotmail.com",
+		"email": "alexanderobandolondono@gmail.com",
 		"merchant_registration": "0000000-00",
-		"type_document_identification_id": 3,
-		"type_organization_id": 2,
-    "type_liability_id": 7,
+		"type_document_identification_id": 6,
+		"type_organization_id": 1,
 		"municipality_id": 822,
-		"type_regime_id": 1,
-    "tax_id": 15
+		"type_regime_id": 1
 	},
-	"payment_form": {
-		"payment_form_id": 2,
-		"payment_method_id": 30,
-		"payment_due_date": "2023-08-25",
-		"duration_measure": "30"
-	},
-	"allowance_charges": [
-		{
-			"discount_id": 1,
-			"charge_indicator": false,
-			"allowance_charge_reason": "DESCUENTO GENERAL",
-			"amount": "50000.00",
-			"base_amount": "1000000.00"
-		}
-	],
-	"legal_monetary_totals": {
-		"line_extension_amount": "840336.134",
-		"tax_exclusive_amount": "840336.134",
-		"tax_inclusive_amount": "1000000.00",
-		"allowance_total_amount": "50000.00",
-		"payable_amount": "950000.00"
-	},
-	"tax_totals":
-	[
+	"tax_totals": [
 		{
 			"tax_id": 1,
 			"tax_amount": "159663.865",
@@ -212,7 +390,17 @@
 			"taxable_amount": "840336.134"
 		}
 	],
-	"invoice_lines":
+    "invoice_period": {
+        "start_date": "2023-12-01",
+        "end_date": "2023-12-31"
+    },
+	"legal_monetary_totals": {
+		"line_extension_amount": "840336.134",
+		"tax_exclusive_amount": "840336.134",
+		"tax_inclusive_amount": "1000000.00",
+		"payable_amount": "1000000.00"
+	},
+	"credit_note_lines":
 	[
 		{
 			"unit_measure_id": 70,
@@ -231,37 +419,15 @@
             "notes": "ESTA ES UNA PRUEBA DE NOTA DE DETALLE DE LINEA.",
 			"code": "COMISION",
 			"type_item_identification_id": 4,
-			"price_amount": "1000000.00",
+			"price_amount": "840336.134",
 			"base_quantity": "1"
 		}
 	]
 }
 
-                  </code></pre>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Nómina
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Nota crédito
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+
+
+</code></pre>
                 </div>
               </div>
             </div>
