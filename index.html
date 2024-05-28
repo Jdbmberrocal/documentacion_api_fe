@@ -37,11 +37,28 @@
       font-size: 16px;
       color: #0b9c06;
     }
+    .nav-tabs li a{
+      color: white;
+      font-weight: bold;
+    }
+
+    .nav-tabs li a:hover{
+      color: black;
+      font-weight: bold;
+    }
+
+    .accordion-button:not(.collapsed)
+    {
+      background-color: #1bacd6;
+      border-radius: 0px 3px 3px 0px;
+      color: white;
+      font-weight: bold;
+    }
     </style>
   </head>
   <body>
     <header class="mb-3">
-      <ul class="nav nav-tabs">
+      <ul class="nav nav-tabs" style="background-color:#1bacd6;">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
@@ -75,7 +92,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                  Campos de Factura electrónica
+                  <b>Campos para Factura electrónica</b>
                 </button>
               </h2>
               <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -114,6 +131,16 @@
 
                   <a href="#" class="btn__element d-block" data-bs-toggle="tooltip" data-bs-html="true" title="Permite definir si se enviará de forma automatica el correo al cliente">sendmail: <i class="fa-solid fa-arrow-right"></i> <span class="required">boolean</span></a>
                   <a href="#" class="btn__element d-block" data-bs-toggle="tooltip" data-bs-html="true" title="Permite definir si se enviará de forma automatica el documento al correo del emisor, recibe true o false">sendmailtome: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">boolean</span></a>
+
+                  <a href="#" class="btn__element d-block" data-bs-toggle="tooltip" data-bs-html="true" title="Propiedad para enviar el método y forma de pago">payment_form: <i class="fa-solid fa-arrow-right"></i> <span class="required">object</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="tooltip" data-bs-html="true" title="Hace referencia al id de la forma de pago. Ver tabla <b>payment_form</b>">payment_form <i class="fa-solid fa-angles-right"></i> payment_form_id: <i class="fa-solid fa-arrow-right"></i> <span class="required">numeric</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="tooltip" data-bs-html="true" title="Hace referencia al id de la método de pago. Ver tabla <b>payment_method</b>">payment_form <i class="fa-solid fa-angles-right"></i> payment_method_id: <i class="fa-solid fa-arrow-right"></i> <span class="required">numeric</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="tooltip" data-bs-html="true" title="Deberá informar la fecha de pago. Es obligatorio cuando el método de pago es a crédito">payment_form <i class="fa-solid fa-angles-right"></i> payment_due_date: <i class="fa-solid fa-arrow-right"></i> <span class="required">date</span></a>
+                  <a href="#" class="btn__element d-block" data-bs-toggle="tooltip" data-bs-html="true" title="Cantidad de días de plazo en caso que sea venta a crédito. Es obligatorio cuando el método de pago es a crédito">payment_form <i class="fa-solid fa-angles-right"></i> duration_measure: <i class="fa-solid fa-arrow-right"></i> <span class="opcional">numeric</span></a>
+
+
+
+
                   <a href="#" class="btn__element d-block" data-bs-toggle="tooltip" data-bs-html="true" title="Corresponde a los campos para información relacionadas con los valores totales aplicables a la factura">legal_monetary_totals: <i class="fa-solid fa-arrow-right"></i> <span class="required">object</span></a>
                   <a href="#" class="btn__element d-block" data-bs-toggle="tooltip" data-bs-html="true" title="Corresponde a la suma de los valores brutos de las líneas de la factura.">legal_monetary_totals <i class="fa-solid fa-angles-right"></i> line_extension_amount: <i class="fa-solid fa-arrow-right"></i> <span class="required">float</span></a>
                   <a href="#" class="btn__element d-block" data-bs-toggle="tooltip" data-bs-html="true" title="La suma de las bases de todas lineas de la factura con impuestos">legal_monetary_totals <i class="fa-solid fa-angles-right"></i> tax_exclusive_amount: <i class="fa-solid fa-arrow-right"></i> <span class="required">float</span></a>
@@ -127,7 +154,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  Notas débito
+                  Campos para Notas débito
                 </button>
               </h2>
               <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -139,7 +166,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                  Notas crédito
+                  Campos para Notas crédito
                 </button>
               </h2>
               <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -157,7 +184,10 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  Factura Electrónica de Venta
+                  Factura Electrónica de Venta &nbsp;
+                  <i class="fa-solid fa-arrow-right"></i>&nbsp;
+                  <span class="badge bg-primary">POST</span>&nbsp;
+                   https://dominio.com/api/ubl2.1/invoice
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
